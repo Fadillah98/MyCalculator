@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
     fun btnOnClick(view: View){
         val btnSelected = view as Button
-        if (tvCount.text.toString().equals("0") || tvCount.text.toString().equals("")){
+        if (tvCount.text.toString().equals("0")){
             when (btnSelected.id){
                 btn1.id  -> tvCount.text = "1"
                 btn2.id  -> tvCount.text = "2"
@@ -60,10 +60,9 @@ class MainActivity : AppCompatActivity() {
                 btn8.id  -> tvCount.text = tvCount.text.toString() + "8"
                 btn9.id  -> tvCount.text = tvCount.text.toString() + "9"
                 btnDec.id ->tvCount.text = tvCount.text.toString() + "."
-                btnAC.id -> tvCount.text = ""
+                btnAC.id -> tvCount.text = "0"
             }
         }
-
     }
 
     fun btnOpOnClick(view: View){
