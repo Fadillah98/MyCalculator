@@ -33,20 +33,6 @@ class MainActivity : AppCompatActivity() {
                 btn8.id  -> tvCount.text = "8"
                 btn9.id  -> tvCount.text = "9"
             }
-        } else if (!operator.equals("")){
-            tvCount.text = ""
-            when (btnSelected.id){
-                btn0.id  -> tvCount.text = "0"
-                btn1.id  -> tvCount.text = "1"
-                btn2.id  -> tvCount.text = "2"
-                btn3.id  -> tvCount.text = "3"
-                btn4.id  -> tvCount.text = "4"
-                btn5.id  -> tvCount.text = "5"
-                btn6.id  -> tvCount.text = "6"
-                btn7.id  -> tvCount.text = "7"
-                btn8.id  -> tvCount.text = "8"
-                btn9.id  -> tvCount.text = "9"
-            }
         } else {
             when (btnSelected.id){
                 btn0.id  -> tvCount.text = tvCount.text.toString() + "0"
@@ -70,6 +56,7 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "Please enter a digit", Toast.LENGTH_SHORT).show()
         } else {
             value = tvCount.text.toString().toDouble()
+            tvCount.text = ""
             val btnOpSelected = view as Button
             when (btnOpSelected.id){
                 btnPlus.id -> operator = "+"
